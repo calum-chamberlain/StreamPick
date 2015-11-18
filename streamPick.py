@@ -37,8 +37,8 @@ class streamPick(QtGui.QMainWindow):
         self._shortcuts = {'st_next': 'c',
                            'st_previous': 'x',
                            'filter_apply': 'f',
-                           'pick_p': 'q',
-                           'pick_s': 'w',
+                           'pick_p': 'p',
+                           'pick_s': 's',
                            'pick_custom': 't',
                            'pick_remove': 'r',
                            }
@@ -448,6 +448,7 @@ class streamPick(QtGui.QMainWindow):
         '''
         This Function is evoked when the user picks
         '''
+        print event.key
         if event.key is not None:
             event.key = event.key.lower()
         if event.inaxes is None:
